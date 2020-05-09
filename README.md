@@ -1,8 +1,8 @@
 # Docker App
 
 ## Docker App
-docker build -t mydatapower - < idg_dk2018411.lts.tar
-docker run -it   -v $PWD/config_myConfig:/drouter/config   -v $PWD/local_mylocal:/drouter/local   -e DATAPOWER_ACCEPT_LICENSE=true   -e DATAPOWER_INTERACTIVE=true   -e DATAPOWER_WORKER_THREADS=4   -p 9090:9090   mydatapower
+### docker build -t mydatapower - < idg_dk2018411.lts.tar
+### docker run -it   -v $PWD/config_myConfig:/drouter/config   -v $PWD/local_mylocal:/drouter/local   -e DATAPOWER_ACCEPT_LICENSE=true   -e DATAPOWER_INTERACTIVE=true   -e DATAPOWER_WORKER_THREADS=4   -p 9090:9090 -p 8080:8080 -p 7050:7050  mydatapower
 
 ## Enable Web Management
 configure terminal
