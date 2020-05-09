@@ -13,6 +13,22 @@ public class CustomerController {
 	@GetMapping(value="/customer", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE })
 	public Customer getCustomer() {
 		Customer customer = new Customer();
+		customer.setVersion("1.0");
+		customer.setId("1");
+		customer.setName("Swastik");
+		customer.setPrice("100");
+		customer.setDescription("My Name");
+		Address address = new Address();
+		address.setMain("101 Street");
+		address.setState("FL");
+		customer.setAddress(address);
+		return customer;
+	}
+	
+	@GetMapping(value="/newcustomer", produces = { MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE })
+	public Customer getnewCustomer() {
+		Customer customer = new Customer();
+		customer.setVersion("2.0");
 		customer.setId("1");
 		customer.setName("Swastik");
 		customer.setPrice("100");
