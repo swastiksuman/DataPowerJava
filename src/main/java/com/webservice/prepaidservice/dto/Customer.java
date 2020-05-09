@@ -8,22 +8,30 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "Customer")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Customer {
+	private Address Address;
 
-	@XmlElement(required = true)
-	protected int id;
-	@XmlElement(required = true)
-	protected String name;
-	@XmlElement(required = true)
-	protected String description;
-	@XmlElement(required = true)
-	protected int price;
+	private String price;
 
-	public int getId() {
-		return id;
+	private String name;
+
+	private String description;
+
+	private String id;
+
+	public Address getAddress() {
+		return Address;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setAddress(Address Address) {
+		this.Address = Address;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
 	public String getName() {
@@ -42,12 +50,17 @@ public class Customer {
 		this.description = description;
 	}
 
-	public int getPrice() {
-		return price;
+	public String getId() {
+		return id;
 	}
 
-	public void setPrice(int price) {
-		this.price = price;
+	public void setId(String id) {
+		this.id = id;
 	}
 
+	@Override
+	public String toString() {
+		return "ClassPojo [Address = " + Address + ", price = " + price + ", name = " + name + ", description = "
+				+ description + ", id = " + id + "]";
+	}
 }
