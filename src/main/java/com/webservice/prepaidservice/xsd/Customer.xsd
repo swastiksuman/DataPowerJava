@@ -4,19 +4,19 @@
 	<xs:element name="Customer">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element type="xs:byte" name="id" />
-				<xs:element type="xs:string" name="version" />
-				<xs:element type="xs:string" name="name" />
-				<xs:element type="xs:string" name="description" />
-				<xs:element type="xs:byte" name="price" />
-				<xs:element name="Address" maxOccurs="1" minOccurs="0">
+			<xs:element name="Address" maxOccurs="1" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element type="xs:string" name="Main" />
-							<xs:element type="xs:string" name="State" />
+							<xs:element type="xs:string" name="main" />
+							<xs:element type="xs:string" name="state" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				<xs:element type="xs:byte" name="price" />
+				<xs:element type="xs:string" name="name" />
+				<xs:element type="xs:string" name="description" />
+				<xs:element type="xs:byte" name="id" />
+				<xs:element type="xs:string" name="version" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
